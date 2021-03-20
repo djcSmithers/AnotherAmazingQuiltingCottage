@@ -1,0 +1,71 @@
+
+
+:host >>> .content {
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+}
+
+h1{
+  font-size:x-large;
+  color: rgb(17, 143, 65);
+  
+  font-family: cursive;
+}
+body{
+  margin: 0;
+}
+
+button{
+  font-size: 20px;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: relative;
+  top: 0;
+  z-index: 5;
+
+  
+  height: 76px;
+  background-color: #b3fff5;
+  
+}
+
+.isFixed{
+  position: fixed;
+  top: 0;
+  
+}
+
+
+
+.hidden{
+  display:none;
+}
+  
+.spacer{
+  flex: 1 1 auto;
+}
+
+
+mat-toolbar a {
+  display: inline-block;
+  margin:0 10px;
+  color: rgb(17, 143, 65);
+  text-decoration: none;
+
+}
+
+
+.mat-drawer-container{ overflow: visible; }

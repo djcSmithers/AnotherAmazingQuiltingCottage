@@ -1,0 +1,28 @@
+mat-form-field{
+    width: 100%;
+}
+img{
+    width: 50px;
+  
+}
+
+mat-option{
+    overflow: visible;
+    height: 15em;    
+}
+
+#imageList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    flex-wrap: wrap;
+}
+
+.image{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    margin: 5px 5px 5px 5px;
+}

@@ -1,0 +1,8 @@
+<form [formGroup]="imageForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="images">Images</label>
+        <input type="file" name="images" id="images" multiple (change)="handleFileInput($event.target.files)">
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>

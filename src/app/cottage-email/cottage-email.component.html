@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md">
+      
+    </div>
+    <div class="col-md-6">
+              <a href="../../assets/PDFs/customer worksheet.pdf">Click here if you would Like a printable version of this form to email</a>
+      <div class="form-container">
+        <form [formGroup]="nodeMailerForm" (ngSubmit)="sendMail()" >
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your name:</mat-label>
+            <input matInput placeholder="provide full name here" formControlName="name" type="text">
+           </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Enter the email:</mat-label>
+            <input matInput #email placeholder="provide email here" formControlName="email" type="email">
+           </mat-form-field>
+          <br>
+          <mat-form-field appearance="outline">
+            <mat-label>Phone #:</mat-label>
+            <input matInput placeholder="provide phone # here" formControlName="phoneNumber" type="text">
+           </mat-form-field>
+          <br>
+
+
+          <mat-form-field appearance="outline">
+            <mat-label>Enter the Backing Fabric:</mat-label>
+            <input matInput placeholder="provide backing" formControlName="fabric" type="text">
+           </mat-form-field>
+
+           <mat-form-field appearance="outline">
+            <mat-label>Batting:</mat-label>
+            <input matInput placeholder="provide batting" formControlName="batting" type="text">
+           </mat-form-field>
+
+           <mat-form-field appearance="outline">
+            <mat-label>Thread color(s):</mat-label>
+            <input matInput placeholder="provide width" formControlName="width" type="text">
+           </mat-form-field>
+
+           <!-- <mat-form-field appearance="outline">
+            <mat-label>Color(s):</mat-label>
+            <input matInput placeholder="provide width" formControlName="width" type="text">
+           </mat-form-field>
+            -->
+           <!-- <mat-form-field appearance="outline">
+            <mat-label>Quilting Description:</mat-label>
+            <input matInput placeholder="provide width" formControlName="width" type="text">
+           </mat-form-field> -->
+          
+
+          <mat-form-field appearance="outline">
+            <mat-label>Mailing (or pickup) Date:</mat-label>
+            <input matInput placeholder="provide width" formControlName="width" type="date">
+           </mat-form-field>
+          
+<!--          
+          <mat-form-field appearance="outline">
+            <mat-label>Enter the design:</mat-label>
+            <input matInput placeholder="provide design name" formControlName="design" type="text">
+           </mat-form-field> -->
+          
+          <!-- <mat-form-field appearance="outline">
+            <mat-label>Enter the material</mat-label>
+            <input matInput placeholder="provide material" formControlName="material" type="text">
+           </mat-form-field> -->
+          <br>
+
+
+          <!-- This will have the drop down icons for the design type -->
+          <mat-form-field appearance="outline">
+            <mat-label>design selection</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let i of images" [value]="i">
+                <img clss="image" [src]="'../../assets/quiltDesigns/' + i.toString()"> {{i.toString()}}
+              </mat-option>
+            </mat-select>
+           </mat-form-field>
+          <br>
+
+          <div id="imageList" >
+
+            <div *ngFor="let i of images">
+              <img [src]="'../../assets/quiltDesigns/' + i.toString()" class="image" >
+            </div>
+
+        </div>
+
+
+        <!-- this is where the Binding input will be -->
+    
+       <button  mat-raised-button color="accent" type="submit"material [disabled]="!nodeMailerForm.valid" >Click Me</button>       
+
+      </form>
+
+      <button (click)="test()" >TEST BUTTON</button>
+
+      </div>
+    
+
+
+    </div>
+
+    <div class="col-md"></div>
+
+  </div>
+</div>
+
